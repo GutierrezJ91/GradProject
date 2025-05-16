@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Mar 14 22:09:03 2025
+# Process ID: 20972
+# Current directory: C:/XilProjects/Custom_IPs/ad5541a_v1_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9276 C:\XilProjects\Custom_IPs\ad5541a_v1_project\AD5541A_v1_project.xpr
+# Log file: C:/XilProjects/Custom_IPs/ad5541a_v1_project/vivado.log
+# Journal file: C:/XilProjects/Custom_IPs/ad5541a_v1_project\vivado.jou
+# Running On: LAPTOP-K3OSB5TI, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17037 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/XilProjects/Custom_IPs/ad5541a_v1_project/AD5541A_v1_project.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {C:\XilProjects\Custom_IPs\AD5541A_1\component.xml}
+ipx::add_bus_interface S00_AXIS_L [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:aximm_rtl:1.0 [ipx::get_bus_interfaces S00_AXIS_L -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:aximm:1.0 [ipx::get_bus_interfaces S00_AXIS_L -of_objects [ipx::current_core]]
+set_property display_name {AXI-Stream Lite Interface} [ipx::get_bus_interfaces S00_AXIS_L -of_objects [ipx::current_core]]
+set_property description {TDATA, TVALID, and TREADY} [ipx::get_bus_interfaces S00_AXIS_L -of_objects [ipx::current_core]]
+ipx::add_bus_parameter NUM_READ_OUTSTANDING [ipx::get_bus_interfaces S00_AXIS_L -of_objects [ipx::current_core]]
+ipx::add_bus_parameter NUM_WRITE_OUTSTANDING [ipx::get_bus_interfaces S00_AXIS_L -of_objects [ipx::current_core]]
+ipx::remove_bus_interface S00_AXIS_L [ipx::current_core]
+ipx::remove_port s00_axis_tstrb [ipx::current_core]
+ipx::remove_port s00_axis_tlast [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD5541A_1
+launch_simulation
+source AD5541A_v1_TB.tcl
+restart
+current_wave_config {Untitled 1}
+add_wave {{/AD5541A_v1_TB/DUT/AD5541A_v1_S00_AXIS_inst/DAC}} 
+run all
+close_sim
+ipx::add_bus_parameter TDATA_NUM_BYTES [ipx::get_bus_interfaces S00_AXIS -of_objects [ipx::current_core]]
+ipx::remove_bus_parameter TDATA_NUM_BYTES [ipx::get_bus_interfaces S00_AXIS -of_objects [ipx::current_core]]
+set_property value_validation_list {32 16} [ipx::get_user_parameters C_S00_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD5541A_1
+set_property widget {comboBox} [ipgui::get_guiparamspec -name "C_S00_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
+set_property value 16 [ipx::get_user_parameters C_S00_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property value 16 [ipx::get_hdl_parameters C_S00_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_list 16 [ipx::get_user_parameters C_S00_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD5541A_1
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 6 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD5541A_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 7 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD5541A_1
+launch_simulation
+set_property core_revision 8 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD5541A_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 9 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD5541A_1
+launch_simulation
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 10 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD5541A_1
+launch_simulation
+source AD5541A_v1_TB.tcl
+restart
+run all
+close_sim
+ipx::unload_core c:/XilProjects/Custom_IPs/AD5541A_1/component.xml

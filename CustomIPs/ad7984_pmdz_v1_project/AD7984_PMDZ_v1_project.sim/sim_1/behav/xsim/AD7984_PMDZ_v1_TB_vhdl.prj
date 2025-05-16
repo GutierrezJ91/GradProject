@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../AD7984_PMDZ_1/src/my_pkg.vhd" \
+"../../../../../AD7984_PMDZ_1/src/AD7984_Control.vhd" \
+"../../../../../AD7984_PMDZ_1/hdl/AD7984_PMDZ_v1.vhd" \
+"../../../../../AD7984_PMDZ_1/hdl/AD7984_PMDZ_v1_M00_AXIS.vhd" \
+"../../../../../AD7984_PMDZ_1/hdl/AD7984_PMDZ_v1_TB.vhd" \
+
+# Do not sort compile order
+nosort

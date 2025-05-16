@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Mar 16 19:02:27 2025
+# Process ID: 18680
+# Current directory: C:/XilProjects/Custom_IPs/mpc3008_adc_v1_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19908 C:\XilProjects\Custom_IPs\mpc3008_adc_v1_project\MPC3008_ADC_v1_project.xpr
+# Log file: C:/XilProjects/Custom_IPs/mpc3008_adc_v1_project/vivado.log
+# Journal file: C:/XilProjects/Custom_IPs/mpc3008_adc_v1_project\vivado.jou
+# Running On: LAPTOP-K3OSB5TI, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17037 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/XilProjects/Custom_IPs/mpc3008_adc_v1_project/MPC3008_ADC_v1_project.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source MPC3008_ADC_v1_TB.tcl
+restart
+run all
+close_sim
+ipx::open_ipxact_file {C:\XilProjects\Custom_IPs\MPC3008_ADC_1\component.xml}
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::infer_bus_interface CLK_50M xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+ipx::add_bus_parameter FREQ_HZ [ipx::get_bus_interfaces CLK_50M -of_objects [ipx::current_core]]
+set_property value 50000000 [ipx::get_bus_parameters FREQ_HZ -of_objects [ipx::get_bus_interfaces CLK_50M -of_objects [ipx::current_core]]]
+ipx::remove_bus_interface CLK_50M [ipx::current_core]
+set_property core_revision 10 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/MPC3008_ADC_1
+ipx::unload_core c:/XilProjects/Custom_IPs/MPC3008_ADC_1/component.xml

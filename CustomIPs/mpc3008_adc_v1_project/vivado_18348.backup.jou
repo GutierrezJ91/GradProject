@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Mar 15 12:23:24 2025
+# Process ID: 18348
+# Current directory: C:/XilProjects/Custom_IPs/mpc3008_adc_v1_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23584 C:\XilProjects\Custom_IPs\mpc3008_adc_v1_project\MPC3008_ADC_v1_project.xpr
+# Log file: C:/XilProjects/Custom_IPs/mpc3008_adc_v1_project/vivado.log
+# Journal file: C:/XilProjects/Custom_IPs/mpc3008_adc_v1_project\vivado.jou
+# Running On: LAPTOP-K3OSB5TI, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17037 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/XilProjects/Custom_IPs/mpc3008_adc_v1_project/MPC3008_ADC_v1_project.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {C:\XilProjects\Custom_IPs\MPC3008_ADC_1\component.xml}

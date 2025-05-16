@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "AD7984_PMDZ_v1_TB_behav" "xil_defaultlib.AD7984_PMDZ_v1_TB" -log "elaborate.log" 

@@ -1,0 +1,107 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Mar  8 22:31:31 2025
+# Process ID: 16668
+# Current directory: C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20428 C:\XilProjects\Custom_IPs\ad7984_pmdz_v1_project\AD7984_PMDZ_v1_project.xpr
+# Log file: C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/vivado.log
+# Journal file: C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project\vivado.jou
+# Running On: LAPTOP-K3OSB5TI, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17037 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.xpr
+update_compile_order -fileset sources_1
+import_files -norecurse {C:/XilProjects/GradProjectRepo/IPs/AD7984_PMOD_1/src/my_pkg.vhd C:/XilProjects/GradProjectRepo/IPs/AD7984_PMOD_1/src/AD7984_Control.vhd}
+file mkdir C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sim_1/new/AD7984_PMDZ_v1_TB.vhd w ]
+add_files -fileset sim_1 C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sim_1/new/AD7984_PMDZ_v1_TB.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source AD7984_PMDZ_v1_TB.tcl
+run all
+run all
+restart
+set_property -name {xsim.simulate.runtime} -value {10ms} -objects [get_filesets sim_1]
+run all
+close_sim
+ipx::open_ipxact_file {C:\XilProjects\Custom_IPs\AD7984_PMDZ_1\component.xml}
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::add_bus_parameter FREQ_HZ [ipx::get_bus_interfaces M00_AXIS_CLK -of_objects [ipx::current_core]]
+set_property description 100MHz [ipx::get_bus_parameters FREQ_HZ -of_objects [ipx::get_bus_interfaces M00_AXIS_CLK -of_objects [ipx::current_core]]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd [ipx::get_file_groups xilinx_vhdlsynthesis -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd [ipx::get_file_groups xilinx_vhdlsynthesis -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sim_1/new/AD7984_PMDZ_v1_TB.vhd [ipx::get_file_groups xilinx_testbench -of_objects [ipx::current_core]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD7984_PMDZ_1
+export_ip_user_files -of_objects  [get_files C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd] -no_script -reset -force -quiet
+remove_files  C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd
+file delete -force C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sim_1/new/AD7984_PMDZ_v1_TB.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sim_1/new/AD7984_PMDZ_v1_TB.vhd
+file delete -force C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sim_1/new/AD7984_PMDZ_v1_TB.vhd
+ipx::merge_project_changes files [ipx::current_core]
+import_files -norecurse {C:/XilProjects/Custom_IPs/AD7984_PMDZ_1/src/AD7984_Control.vhd C:/XilProjects/Custom_IPs/AD7984_PMDZ_1/src/my_pkg.vhd}
+ipx::merge_project_changes files [ipx::current_core]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd [ipx::get_file_groups xilinx_vhdlsynthesis -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd [ipx::get_file_groups xilinx_vhdlsynthesis -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+export_ip_user_files -of_objects  [get_files C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd] -no_script -reset -force -quiet
+remove_files  C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd
+file delete -force C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd
+ipx::merge_project_changes files [ipx::current_core]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+export_ip_user_files -of_objects  [get_files C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd] -no_script -reset -force -quiet
+remove_files  C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd
+file delete -force C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd
+import_files -norecurse {C:/XilProjects/Custom_IPs/AD7984_PMDZ_1/src/AD7984_Control.vhd C:/XilProjects/Custom_IPs/AD7984_PMDZ_1/src/my_pkg.vhd}
+ipx::merge_project_changes files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd [ipx::get_file_groups xilinx_vhdlsynthesis -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd [ipx::get_file_groups xilinx_vhdlsynthesis -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+ipx::remove_file ../ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+export_ip_user_files -of_objects  [get_files C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd] -no_script -reset -force -quiet
+remove_files  C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd
+file delete -force C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/AD7984_Control.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd] -no_script -reset -force -quiet
+remove_files  C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd
+file delete -force C:/XilProjects/Custom_IPs/ad7984_pmdz_v1_project/AD7984_PMDZ_v1_project.srcs/sources_1/imports/src/my_pkg.vhd
+ipx::merge_project_changes files [ipx::current_core]
+add_files -norecurse -scan_for_includes {C:/XilProjects/Custom_IPs/AD7984_PMDZ_1/src/AD7984_Control.vhd C:/XilProjects/Custom_IPs/AD7984_PMDZ_1/src/my_pkg.vhd}
+ipx::merge_project_changes files [ipx::current_core]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/XilProjects/Custom_IPs/AD7984_PMDZ_1/hdl/AD7984_PMDZ_v1_TB.vhd w ]
+add_files -fileset sim_1 C:/XilProjects/Custom_IPs/AD7984_PMDZ_1/hdl/AD7984_PMDZ_v1_TB.vhd
+update_compile_order -fileset sim_1
+ipx::merge_project_changes files [ipx::current_core]
+update_compile_order -fileset sim_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD7984_PMDZ_1
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/XilProjects/Custom_IPs/AD7984_PMDZ_1

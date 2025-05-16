@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../MPC3008_ADC_1/hdl/MPC3008_ADC_v1.vhd" \
+"../../../../../MPC3008_ADC_1/hdl/MPC3008_ADC_v1_S00_AXI.vhd" \
+"../../../../../MPC3008_ADC_1/src/MPC3008_Control.vhd" \
+"../../../../../MPC3008_ADC_1/src/MPC3008_ADC_v1_TB.vhd" \
+
+# Do not sort compile order
+nosort

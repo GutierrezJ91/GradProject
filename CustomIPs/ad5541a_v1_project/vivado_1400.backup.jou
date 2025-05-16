@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Mar 14 21:47:57 2025
+# Process ID: 1400
+# Current directory: C:/XilProjects/Custom_IPs/ad5541a_v1_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23528 C:\XilProjects\Custom_IPs\ad5541a_v1_project\AD5541A_v1_project.xpr
+# Log file: C:/XilProjects/Custom_IPs/ad5541a_v1_project/vivado.log
+# Journal file: C:/XilProjects/Custom_IPs/ad5541a_v1_project\vivado.jou
+# Running On: LAPTOP-K3OSB5TI, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17037 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/XilProjects/Custom_IPs/ad5541a_v1_project/AD5541A_v1_project.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {C:\XilProjects\Custom_IPs\AD5541A_1\component.xml}

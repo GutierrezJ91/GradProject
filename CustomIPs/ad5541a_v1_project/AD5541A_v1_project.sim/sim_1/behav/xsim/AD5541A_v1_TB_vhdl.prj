@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../AD5541A_1/src/my_pkg.vhd" \
+"../../../../../AD5541A_1/src/AD5541A_Control.vhd" \
+"../../../../../AD5541A_1/hdl/AD5541A_v1.vhd" \
+"../../../../../AD5541A_1/hdl/AD5541A_v1_S00_AXIS.vhd" \
+"../../../../../AD5541A_1/src/AD5541A_v1_TB.vhd" \
+
+# Do not sort compile order
+nosort
